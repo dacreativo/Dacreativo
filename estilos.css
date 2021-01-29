@@ -1,0 +1,586 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+nav{
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+nav a{
+    color:#fff;
+    text-decoration: none;
+}
+
+.icono{
+    display: block;
+    z-index: 100000000;
+    animation: moverIzquierda 1s ease-in;
+}
+
+header{
+    background: #2C3E50;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #4CA1AF, #2C3E50);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4CA1AF, #2C3E50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+    height: auto;
+    padding: 48px;
+    width: 100%;
+}
+
+.container{
+    width: 95%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: auto;
+    
+}
+.di{
+    text-decoration: none;
+    font-size: 12px;
+}
+
+#make {
+    color:rgb(255, 255, 255);
+    text-transform: none;
+    font-size:30px;
+    font-weight:bold;
+    padding-top:20px; 
+    
+    position: static;
+    width:100%;
+    bottom:45%;
+    display:block;
+    }
+
+    #flip {
+    height:50px;
+    overflow:hidden;
+    }
+
+    #flip > div > div {
+    color:#fff;
+    padding:1px 12px;
+    height:45px;
+    margin-bottom:45px;
+    display:inline-block;
+    }
+
+    #flip div:first-child {
+    animation: show 5s linear infinite;
+    }
+
+    #flip div div {
+    background:#fae902;
+    }
+    #flip div:first-child div {
+    background:#88f30e;
+    }
+    #flip div:last-child div {
+    background:#DC143C;
+    } 
+
+    .me {
+  display: block;
+  margin: 2em auto;
+  margin-bottom: 3em;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+}
+
+.social {
+  text-align: center;
+  font-size: 2.5em;
+  color: #555;
+  overflow: hidden;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  i {
+    margin: .3em;
+    cursor: pointer;
+    transition: color 300ms ease, margin-top 300ms ease;
+    transform: translateZ(0);
+    
+    &:hover {
+      margin-top: -1px;
+    }
+    
+    &#twitter:hover {
+      color: #77DDF6;
+    }
+
+    &#github:hover {
+      color: black;
+    }
+
+    &#linkedin:hover {
+      color: #0177B5;
+    }
+
+    &#code:hover {
+      color: #29A329;
+    }
+
+    &#stack:hover {
+      color: #ED780E;
+    }
+
+    &#plus:hover {
+      color: #D43402;
+    }
+
+    &#mail:hover {
+      color: #F7B401;
+    }
+  }
+}
+
+/* Let's style the wrapper in such away that, 
+it should always be at the center of the browser */
+.wrapper {
+    position: relative;
+    
+    top: 80%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    width: 550px;
+  }
+  
+  /* Style the Un-order list by setting its list-style to none */
+  .wrapper ul {
+    list-style: none;
+  }
+  
+  /* Style the list items inside the UL list, by setting its width, height and line-height 
+    and float them to left and set its border and border-radius.
+   */
+  .wrapper ul li {
+    width: 75px;
+    height: 75px;
+    line-height: 75px;
+    margin: 0 10px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 5px solid #D8E2DC;
+    float: left;
+    transition: all 0.5s ease;
+  }
+  
+  /* Style the icons by setting its color and margin-top value to 20px 
+  to align it properly */
+  .wrapper ul li .fa {
+    color: #D8E2DC;
+    margin-top: 20px;
+    transition: all 0.5s ease;
+  }
+  
+  /* Now target the specific li classes for styling and use box-shadow effect to border and text-shadow effect
+    to icons for glowing effect and use transition property for smooth transition effect. */
+  /*facebook*/
+  .wrapper ul li:hover.facebook {
+    border: 5px solid #3b5998;
+    box-shadow: 0 0 15px #3b5998;
+    transition: all 0.5s ease;
+  }
+  
+  .wrapper ul li:hover .fa-facebook {
+    color: #3b5998;
+    text-shadow: 0 0 15px #3b5998;
+    transition: all 0.5s ease;
+  }
+  
+  /*twitter*/
+  .wrapper ul li:hover.twitter {
+    border: 5px solid #00aced;
+    box-shadow: 0 0 15px #00aced;
+    transition: all 0.5s ease;
+  }
+  
+  .wrapper ul li:hover .fa-twitter {
+    color: #00aced;
+    text-shadow: 0 0 15px #00aced;
+    transition: all 0.5s ease;
+  }
+  
+  /* instagram */
+  .wrapper ul li:hover.instagram {
+    border: 5px solid #bc2a8d;
+    box-shadow: 0 0 15px #bc2a8d;
+    transition: all 0.5s ease;
+  }
+  
+  .wrapper ul li:hover .fa-instagram {
+    color: #bc2a8d;
+    text-shadow: 0 0 15px #bc2a8d;
+    transition: all 0.5s ease;
+  }
+  
+  /* google */
+  .wrapper ul li:hover.google {
+    border: 5px solid #dd4b39;
+    box-shadow: 0 0 15px #dd4b39;
+    transition: all 0.5s ease;
+  }
+  
+  .wrapper ul li:hover .fa-google {
+    color: #dd4b39;
+    text-shadow: 0 0 15px #dd4b39;
+    transition: all 0.5s ease;
+  }
+  
+  /* whatsapp */
+  .wrapper ul li:hover.whatsapp {
+    border: 5px solid #4dc247;
+    box-shadow: 0 0 15px #4dc247;
+    transition: all 0.5s ease;
+  }
+  
+  .wrapper ul li:hover .fa-whatsapp {
+    color: #4dc247;
+    text-shadow: 0 0 15px #4dc247;
+    transition: all 0.5s ease;
+  }
+  .card {
+    text-align: center;
+    padding: 20px;
+    font-size: 1.5em;
+    color: rgb(0, 0, 0);
+    background: #fff;
+    border-radius: 2px;
+    display: flex;
+    position: static;
+    height: auto;
+    margin: 1rem;
+    
+    
+     
+    
+    
+    
+  
+  }
+  .card img{
+    border-radius: 80px;
+    padding: 20px;  
+    position: static;
+  
+  }
+
+  .card-personal-picture{
+      border-radius: 30px;
+      
+  }
+  .card .card-education-description p{
+      text-align: center;
+  }
+  
+  .card .card-work-experience p{
+      text-align: center;
+  }
+  
+  .card .card-github a{
+      font-weight: bold;
+  }
+  
+  .card .card-personal-picture img {
+      height: 150px;
+      width: 150px;
+  }
+  
+  
+
+    .footer{
+        background: #152F4F;
+        color:white;
+        padding: 30px;
+        
+        .links{
+          ul {list-style-type: none;}
+          li a{
+            color: white;
+            transition: color .2s;
+            &:hover{
+              text-decoration:none;
+              color:#4180CB;
+              }
+          }
+        }  
+        .about-company{
+          i{font-size: 25px;}
+          a{
+            color:white;
+            transition: color .2s;
+            &:hover{color:#4180CB}
+          }
+        } 
+        .location{
+          i{font-size: 18px;}
+        }
+        .copyright p{border-top:1px solid rgba(255,255,255,.1);} 
+      }
+
+
+
+    @keyframes show {
+    0% {margin-top:-270px;}
+    5% {margin-top:-180px;}
+    33% {margin-top:-180px;}
+    38% {margin-top:-90px;}
+    66% {margin-top:-90px;}
+    71% {margin-top:0px;}
+    99.99% {margin-top:0px;}
+    100% {margin-top:-270px;}
+    }
+    
+    
+    
+
+
+
+img{
+    display: block;
+    height: 450px;
+    object-fit: cover;
+    
+}
+
+.textos{
+    width: 50%;
+    color:#fff;
+}
+
+.textos h1{
+    font-size:80px;
+    position:static;
+    display: inline-block;
+    text-align: center;
+    padding: 5px;
+    border-radius: 3px;
+    
+    
+
+}
+h1 {
+    position:static;
+    display: inline-block;
+     
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.textos h1{
+    font-size: 120px;
+    text-align: left;
+}
+.texImpresion {
+    color: #fff;
+    font-size: 12em;
+    font-weight: bold;
+    font-family: Helvetica;
+    text-shadow: 
+      0 1px 0 #ccc, 
+      0 2px 0 #c9c9c9, 
+      0 3px 0 #bbb, 
+      0 4px 0 #b9b9b9, 
+      0 5px 0 #aaa, 
+      0 6px 1px rgba(0,0,0,.1), 
+      0 0 5px rgba(0,0,0,.1), 
+      0 1px 3px rgba(0,0,0,.3), 
+      0 3px 5px rgba(0,0,0,.2), 
+      0 5px 10px rgba(0,0,0,.25), 
+      0 10px 10px rgba(0,0,0,.2), 
+      0 20px 20px rgba(0,0,0,.15);
+  }
+    
+.textos h2{
+    font-size:30px;
+    
+}
+span.uni {
+    font-size: 40px;
+    position:static;
+    display: inline-block;
+    text-align: center;
+    padding: 5px;
+    border-radius: 3px;
+    color: #ffffff;
+    }
+span.di {
+    font-size: 20px;
+    position:static;
+    display: inline-block;
+    text-align: left;
+    padding: 0px;
+    border-radius: 3px;
+    color: #03000c;
+    }
+
+.textos a{
+    
+    display: inline-block;
+    color:#fff;
+    font-weight: 300;
+    text-decoration: none;
+    margin-top: 30px;
+    margin-left: 30px;
+    width: 150px;
+    box-shadow:inset 0px 1px 0px 0px #f5978e;
+	background:linear-gradient(to bottom, #f24537 5%, #c62d1f 100%);
+	background-color:#f24537;
+	border-radius:6px;
+	border:1px solid #d02718;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	text-align:center;
+	font-size:18px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #810e05;
+    
+    }
+ 
+.textos a:hover{
+    background:linear-gradient(to bottom, #c62d1f 5%, #f24537 100%);
+	background-color:#c62d1f;
+}
+.enlaces{
+    position: fixed;
+    display: flex;
+    top: 0;
+    background: #000;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    right: 0;
+    flex-direction: column;
+    width: 100%;
+    transition: all 1s ease;
+    background: #bc4e9c;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #f80759, #bc4e9c);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #f80759, #bc4e9c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.uno{
+    
+-webkit-clip-path: circle(0% at 0 0);
+clip-path: circle(0% at 0 0);
+
+}
+
+.dos{
+    
+    -webkit-clip-path: circle(150% at 0 0);
+    clip-path: circle(150% at 0 0);
+    
+    }
+
+
+
+@media screen and (max-width:800px){
+    img{
+        height: 370px;
+    }
+    .card-education-description{
+        font-size: 16px ;
+    }
+    
+    .textos h1{
+        font-size: 70px;
+        text-align: center;
+    }
+
+    .textos h2{
+        font-size: 20px;
+    }
+    
+}
+
+@media screen and (max-width:700px){
+    img{
+        height: 250px;
+    }
+    .textos h1{
+        font-size: 40px;
+    }
+
+    .textos h2{
+        font-size: 15px;
+
+    }
+    
+    
+}
+
+@media screen and (max-width:450px){
+    .container{
+        width: 100%;
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+    }
+    @media screen and (max-width: 450px) {
+        .wrapper {
+        display:none;
+        }
+        .Contactame{
+            display:none; 
+        }
+
+
+    .footer{
+        width: 100%;
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+    }
+    .col-lg-5 {
+        width: 100%;
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+    }
+    
+    .textos{
+        width: 100%;
+        text-align: center;
+    }
+    .textos h1{
+        font-size: 60px;
+    }    
+}
+
+@media screen and (max-width:340px){
+    img{
+        height: 160px;
+    }
+    .textos h1{
+        font-size: 35px;
+    }
+    .textos a{
+        width: 120px;
+    }
+    .textos h2{
+        font-size: 15px;
+    }
+    
+}
